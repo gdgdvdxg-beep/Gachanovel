@@ -1,0 +1,634 @@
+[
+ {
+  "id": "klein",
+  "name": "كلاين موريتي",
+  "world": "سيد الغوامض",
+  "rarity": "legendary",
+  "role": "مخرّب ومتحكم",
+  "hp": 270,
+  "atk": 45,
+  "def": 30,
+  "dmg_type": "mystic",
+  "resistance": "dark",
+  "max_energy": 120,
+  "abilities": [
+   {
+    "name": "الرصاصة الهوائية",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "يطلق مقذوفًا هوائيًا غير مرئي يسبب ضررًا غامضًا بنسبة 100% من الهجوم لعدو واحد.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "شريحة التذبح الورقية",
+    "kind": "special",
+    "target": "ally",
+    "cost": 30,
+    "desc": "يمنح حليفًا واحدًا درعًا يمتص ضررًا يعادل 20% من صحة كلاين القصوى.",
+    "effects": [
+     {
+      "type": "shield",
+      "pct_max_hp": 0.2
+     }
+    ]
+   },
+   {
+    "name": "التحكم بالدمى",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "يقلل دفاع عدو واحد بنسبة 30% ويمنعه من استخدام نهايته.",
+    "effects": [
+     {
+      "type": "def_mod",
+      "pct": -0.3
+     },
+     {
+      "type": "block_ult"
+     }
+    ]
+   },
+   {
+    "name": "العرافة الفورية",
+    "kind": "special",
+    "target": "all_allies",
+    "cost": 40,
+    "desc": "يقلل الضرر المظلم والغامض الذي يتلقاه الفريق بنسبة 25%.",
+    "effects": [
+     {
+      "type": "dmg_taken_reduce",
+      "dmg_types": [
+       "dark",
+       "mystic"
+      ],
+      "pct": 0.25
+     }
+    ]
+   },
+   {
+    "name": "مستنقع التاريخ",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_enemies",
+    "cost": 120,
+    "desc": "ضرر غامض جماعي بنسبة 180% من الهجوم، مع فرصة 50% لتأخير دور كل عدو.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.8
+     },
+     {
+      "type": "delay",
+      "chance": 0.5
+     }
+    ]
+   }
+  ],
+  "passive": {
+   "id": "lucky_angel",
+   "name": "ملاك الحظ السعيد",
+   "desc": "طوال وجود كلاين حيًا، تزيد مقاومة الفريق بالكامل ضد جميع أنواع الضرر بنسبة 10%. وعندما يتعرض كلاين لضربة حرجة، يشحن طاقته تلقائيًا بـ +15 طاقة."
+  }
+ },
+ {
+  "id": "lilen",
+  "name": "ليلين فانتير",
+  "world": "ساحر عالم مجوس",
+  "rarity": "legendary",
+  "role": "مسبّب ضرر أساسي مستمر",
+  "hp": 225,
+  "atk": 60,
+  "def": 24,
+  "dmg_type": "fire",
+  "resistance": "mystic",
+  "max_energy": 100,
+  "abilities": [
+   {
+    "name": "لمسة الحمض",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "يهاجم عدوًا واحدًا مسببًا ضررًا ناريًا بنسبة 90% من الهجوم.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 0.9
+     }
+    ]
+   },
+   {
+    "name": "رقاقة الذكاء الاصطناعي",
+    "kind": "special",
+    "target": "self",
+    "cost": 30,
+    "desc": "يرفع هجوم ليلين بنسبة 40% ويتجاهل 20% من دفاع العدو في هجماته القادمة.",
+    "effects": [
+     {
+      "type": "atk_mod",
+      "pct": 0.4
+     },
+     {
+      "type": "ignore_def",
+      "pct": 0.2
+     }
+    ]
+   },
+   {
+    "name": "نيران كيمويين السامة",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "ضرر ناري فوري بنسبة 120% لعدو واحد، ويتركه مصابًا بـ«الحرق السام» يضره بنسبة 40% من الهجوم في بداية كل جولة له.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.2
+     },
+     {
+      "type": "dot",
+      "mult": 0.4,
+      "id": "toxic_burn"
+     }
+    ]
+   },
+   {
+    "name": "دروع خط الدم",
+    "kind": "special",
+    "target": "self",
+    "cost": 40,
+    "desc": "يقلل الضرر الجسدي الذي يتلقاه ليلين بنسبة 30%.",
+    "effects": [
+     {
+      "type": "dmg_taken_reduce",
+      "dmg_type": "physical",
+      "pct": 0.3
+     }
+    ]
+   },
+   {
+    "name": "تجسد الأفعى العملاقة",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_enemies",
+    "cost": 100,
+    "desc": "ضرر ناري جماعي بنسبة 220%. وإن كان العدو مصابًا بـ«الحرق السام» تنفجر السموم بضرر إضافي 80% يتجاهل الدفاع.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 2.2
+     },
+     {
+      "type": "damage_bonus_if_dot",
+      "dot_id": "toxic_burn",
+      "mult": 0.8
+     }
+    ]
+   }
+  ],
+  "passive": {
+   "id": "ai_insight",
+   "name": "الإدراك الفائق للرقاقة",
+   "desc": "في بداية كل جولة، تقوم رقاقة الـ A.I بتحليل ساحة المعركة. إذا هاجم ليلين عدوًا تقل صحته عن 50%، يتجاهل هجومه 30% من دفاع هذا العدو تلقائيًا."
+  }
+ },
+ {
+  "id": "ainz",
+  "name": "آينز أول غون",
+  "world": "أوفرلورد",
+  "rarity": "legendary",
+  "role": "ضرر سحري جماعي وإحياء",
+  "hp": 300,
+  "atk": 52,
+  "def": 33,
+  "dmg_type": "dark",
+  "resistance": "physical",
+  "max_energy": 140,
+  "abilities": [
+   {
+    "name": "السهم السحري",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "يطلق سهامًا ضوئية متعددة تسبب 100% ضرر مظلم لعدو واحد.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "درع البريل المتألق",
+    "kind": "special",
+    "target": "ally",
+    "cost": 30,
+    "desc": "يجعل نفسه أو حليفه محصنًا من أول هجوم جسدي يتلقاه.",
+    "effects": [
+     {
+      "type": "phys_immune"
+     }
+    ]
+   },
+   {
+    "name": "البرق الأسود",
+    "kind": "special",
+    "target": "enemy_plus",
+    "cost": 30,
+    "desc": "130% ضرر مظلم لعدو واحد ولعدو آخر، ويمنعهما من تلقي أي تقويات.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.3
+     },
+     {
+      "type": "block_buff"
+     }
+    ]
+   },
+   {
+    "name": "تعزيز السحر",
+    "kind": "special",
+    "target": "self",
+    "cost": 0,
+    "desc": "يشحن طاقته فورًا ويرفع ضرر نهايته القادمة بنسبة 25%. (قدرة استثنائية: تمنح +40 طاقة بدل أن تستهلك).",
+    "effects": [
+     {
+      "type": "ult_boost",
+      "pct": 0.25
+     }
+    ],
+    "energy": 40
+   },
+   {
+    "name": "الهدف من كل الحياة هو الموت",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_enemies",
+    "cost": 140,
+    "desc": "300% ضرر مظلم جماعي لكل الأعداء. وإن كان هناك حليف ميت يُحييه بـ 30% من صحته القصوى.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 3.0
+     },
+     {
+      "type": "revive",
+      "pct": 0.3
+     }
+    ]
+   }
+  ],
+  "passive": {
+   "id": "lord_of_death",
+   "name": "حاكم الموت الساكن",
+   "desc": "آينز محصن بالكامل ضد تأثيرات الصعق أو التحكم في الأدوار. وعندما يموت أي عدو في الساحة، يستعيد آينز 15% من صحته القصوى و+20 طاقة فورًا."
+  }
+ },
+ {
+  "id": "brain",
+  "name": "براين أنغلوس",
+  "world": "أوفرلورد",
+  "rarity": "common",
+  "role": "مسبّب ضرر جسدي سريع",
+  "hp": 160,
+  "atk": 32,
+  "def": 18,
+  "dmg_type": "physical",
+  "resistance": "physical",
+  "max_energy": 80,
+  "abilities": [
+   {
+    "name": "قطع الوميض",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "ضربة سيف سريعة تسبب ضررًا جسديًا بنسبة 100% من الهجوم لعدو واحد.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "الضربة الرباعية",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "هجوم خاطف لعدو واحد يسبب 140% ضرر جسدي ويتجاهل 15% من دفاع الهدف.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.4,
+      "ignore": 0.15
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "derrick",
+  "name": "ديريك بيرغ",
+  "world": "سيد الغوامض",
+  "rarity": "rare",
+  "role": "مدافع مدعم",
+  "hp": 165,
+  "atk": 33,
+  "def": 22,
+  "dmg_type": "fire",
+  "resistance": "dark",
+  "max_energy": 90,
+  "abilities": [
+   {
+    "name": "مطرقة الضوء",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "يضرب عدوًا واحدًا مسببًا 100% ضرر ناري.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "تطهير الجسد",
+    "kind": "special",
+    "target": "ally",
+    "cost": 30,
+    "desc": "يزيل كل التأثيرات السلبية عن حليف واحد فورًا.",
+    "effects": [
+     {
+      "type": "cleanse"
+     }
+    ]
+   },
+   {
+    "name": "هالة الكاهن",
+    "kind": "special",
+    "target": "ally",
+    "cost": 30,
+    "desc": "يرفع دفاع أحد الحلفاء بنسبة 25%.",
+    "effects": [
+     {
+      "type": "def_mod",
+      "pct": 0.25
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "narberal",
+  "name": "نابيرال غاما",
+  "world": "أوفرلورد",
+  "rarity": "special",
+  "role": "مسبّب ضرر سحري كهربائي",
+  "hp": 168,
+  "atk": 48,
+  "def": 18,
+  "dmg_type": "mystic",
+  "resistance": "fire",
+  "max_energy": 100,
+  "abilities": [
+   {
+    "name": "الصاعقة المصغرة",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "تطلق صعقة تسبب 100% ضرر غامض لعدو واحد.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "الصدمة الحارقة",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "صعقة كهربائية مركزة تسبب ضررًا غامضًا بنسبة 150% من الهجوم لعدو واحد.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.5
+     }
+    ]
+   },
+   {
+    "name": "السلسلة الكهربائية",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 40,
+    "desc": "تضرب عدوًا واحدًا بـ 120% ضرر، وتتفرع لتصيب عدوًا آخر بنسبة 60% من الضرر.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.2,
+      "splash": 0.6
+     }
+    ]
+   },
+   {
+    "name": "التنين البرقي",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_enemies",
+    "cost": 100,
+    "desc": "تستدعي تنانين رعدية تضرب جميع الأعداء بـ 200% ضرر غامض.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 2.0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "audrey",
+  "name": "أودري هول",
+  "world": "سيد الغوامض",
+  "rarity": "unique",
+  "role": "معالجة ومتحكمة بالعدو",
+  "hp": 182,
+  "atk": 39,
+  "def": 26,
+  "dmg_type": "mystic",
+  "resistance": "mystic",
+  "max_energy": 110,
+  "abilities": [
+   {
+    "name": "الوخز النفسي",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "تهاجم عقل عدو واحد مسببة 100% ضرر غامض.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "مهدئ العقل",
+    "kind": "special",
+    "target": "ally",
+    "cost": 30,
+    "desc": "تعالج حليفًا واحدًا بقيمة 120% من هجوم أودري، وتزيل عنه النوم والارتباك.",
+    "effects": [
+     {
+      "type": "heal_atk",
+      "mult": 1.2
+     },
+     {
+      "type": "cleanse_control"
+     }
+    ]
+   },
+   {
+    "name": "التنويم المغناطيسي",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "تنوّم عدوًا واحدًا فيفوّت دوره، ويستيقظ إن تلقى ضررًا جسديًا.",
+    "effects": [
+     {
+      "type": "sleep"
+     }
+    ]
+   },
+   {
+    "name": "الندبة النفسية",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 40,
+    "desc": "130% ضرر غامض لعدو واحد، وتختم قدراته الخاصة ونهايته في جولته القادمة.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.3
+     },
+     {
+      "type": "seal"
+     }
+    ]
+   },
+   {
+    "name": "تلاعب المشاعر",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_allies",
+    "cost": 110,
+    "desc": "تشفي الفريق بالكامل بنسبة 150% من هجومها، وتخفض هجوم جميع الأعداء بنسبة 20%.",
+    "effects": [
+     {
+      "type": "heal_atk",
+      "mult": 1.5
+     },
+     {
+      "type": "atk_mod",
+      "pct": -0.2,
+      "on": "enemies"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "demiurge",
+  "name": "ديميورغ",
+  "world": "أوفرلورد",
+  "rarity": "epic",
+  "role": "مسبّب ضرر ناري ومتحكم",
+  "hp": 238,
+  "atk": 56,
+  "def": 28,
+  "dmg_type": "fire",
+  "resistance": "fire",
+  "max_energy": 120,
+  "abilities": [
+   {
+    "name": "المخلب الحارق",
+    "kind": "basic",
+    "target": "enemy",
+    "energy": 30,
+    "desc": "يمزق عدوًا واحدًا مسببًا 100% ضرر ناري.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "صوت الإمبراطور",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 30,
+    "desc": "يلقي أمرًا صوتيًا يجبر عدوًا واحدًا على مهاجمة حليفه بهجوم عادي في جولته القادمة.",
+    "effects": [
+     {
+      "type": "confuse"
+     }
+    ]
+   },
+   {
+    "name": "استدعاء شياطين الجحيم",
+    "kind": "special",
+    "target": "all_enemies",
+    "cost": 40,
+    "desc": "يستدعي هجومًا إضافيًا يضرب جميع الأعداء بـ 60% ضرر ناري.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 0.6
+     }
+    ]
+   },
+   {
+    "name": "شفرات الجحيم",
+    "kind": "special",
+    "target": "enemy",
+    "cost": 40,
+    "desc": "يطلق شفرات نارية تخترق عدوًا واحدًا بـ 160% ضرر ناري وتتجاهل 25% من دفاعه.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.6,
+      "ignore": 0.25
+     }
+    ]
+   },
+   {
+    "name": "سقوط الحجارة النارية",
+    "kind": "ult",
+    "ult": true,
+    "target": "all_enemies",
+    "cost": 120,
+    "desc": "نيازك تضرب جميع الأعداء بـ 240% ضرر ناري، وتتركهم محروقين: 40% من هجوم ديميورغ في بداية كل جولة لهم.",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 2.4
+     },
+     {
+      "type": "dot",
+      "mult": 0.4,
+      "id": "hell_burn"
+     }
+    ]
+   }
+  ]
+ }
+]

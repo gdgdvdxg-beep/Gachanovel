@@ -1,0 +1,226 @@
+[
+ {
+  "id": "skeleton",
+  "name": "الهيكل العظمي المحارب",
+  "world": "تجريبي",
+  "rarity": "common",
+  "tier": "normal",
+  "hp": 180,
+  "atk": 30,
+  "def": 20,
+  "dmg_type": "physical",
+  "resistance": "dark",
+  "max_energy": 0,
+  "ai": "random",
+  "abilities": [
+   {
+    "name": "ضربة سيف",
+    "kind": "basic",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "ضربة ثقيلة",
+    "kind": "special",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.5
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_mage",
+  "name": "الساحر الناري المبتدئ",
+  "world": "تجريبي",
+  "rarity": "common",
+  "tier": "normal",
+  "hp": 140,
+  "atk": 38,
+  "def": 14,
+  "dmg_type": "fire",
+  "resistance": "mystic",
+  "max_energy": 0,
+  "ai": "random",
+  "abilities": [
+   {
+    "name": "شرارة",
+    "kind": "basic",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "موجة لهب",
+    "kind": "special",
+    "target": "all_enemies",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 0.7
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "stone_guard",
+  "name": "الحارس الحجري",
+  "world": "تجريبي",
+  "rarity": "common",
+  "tier": "normal",
+  "hp": 260,
+  "atk": 24,
+  "def": 30,
+  "dmg_type": "mystic",
+  "resistance": "fire",
+  "max_energy": 0,
+  "ai": "random",
+  "abilities": [
+   {
+    "name": "لكمة",
+    "kind": "basic",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "وضعية الدرع",
+    "kind": "special",
+    "target": "self",
+    "desc": "",
+    "effects": [
+     {
+      "type": "def_mod",
+      "pct": 0.3
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_captain",
+  "name": "قائد الهياكل",
+  "world": "تجريبي",
+  "rarity": "special",
+  "tier": "miniboss",
+  "hp": 520,
+  "atk": 36,
+  "def": 26,
+  "dmg_type": "physical",
+  "resistance": "dark",
+  "max_energy": 0,
+  "ai": "simple",
+  "abilities": [
+   {
+    "name": "شق",
+    "kind": "basic",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.0
+     }
+    ]
+   },
+   {
+    "name": "صيحة الحرب",
+    "kind": "special",
+    "target": "self",
+    "desc": "",
+    "effects": [
+     {
+      "type": "atk_mod",
+      "pct": 0.3
+     }
+    ]
+   },
+   {
+    "name": "اكتساح",
+    "kind": "special",
+    "target": "all_enemies",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 0.8
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ancient_guardian",
+  "name": "حارس البوابة القديم",
+  "world": "تجريبي",
+  "rarity": "unique",
+  "tier": "boss",
+  "hp": 1100,
+  "atk": 44,
+  "def": 34,
+  "dmg_type": "mystic",
+  "resistance": "physical",
+  "max_energy": 0,
+  "ai": "simple",
+  "abilities": [
+   {
+    "name": "انفجار غامض",
+    "kind": "basic",
+    "target": "enemy",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 1.2
+     }
+    ]
+   },
+   {
+    "name": "هزة",
+    "kind": "special",
+    "target": "all_enemies",
+    "desc": "",
+    "effects": [
+     {
+      "type": "damage",
+      "mult": 0.7
+     }
+    ]
+   },
+   {
+    "name": "حماية حجرية",
+    "kind": "special",
+    "target": "self",
+    "desc": "",
+    "effects": [
+     {
+      "type": "def_mod",
+      "pct": 0.4
+     }
+    ]
+   }
+  ]
+ }
+]
